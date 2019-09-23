@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# versi0n 0921.night
+
 
 cd ${1:-.};
 # putline html
@@ -16,20 +18,6 @@ for i in src/*md; do
 	html_filename="${md_filename/md/html}";
 	html="$($markdown_convert src/$md_filename)"
 	echo "$tmpl$html$foot" > public/$html_filename;
-done
+done;
 
-
-# convert *md file
-
-#input_file="$1";
-
-#output_file="$2"
-
-#filename="$(basename "$input_file")";
-#html_name="${n/md/html}"
-
-
-#html="$(hoedown --all-block --all-span $input_file)"
-
-#echo "$tmpl$html$foot" > "public/$html_name"
-
+exit 0
