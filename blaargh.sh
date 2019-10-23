@@ -17,7 +17,7 @@ for i in src/*md; do
 	md_filename="$(basename $i)";
 	html_filename="${md_filename/md/html}";
 	html="$($markdown_convert src/$md_filename)"
-	echo "$tmpl$html$foot" > public/$html_filename;
+	echo "$tmpl$html$foot" > $html_filename;
 done;
 
 exit 0
